@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>留言建议</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="qiye.css/wu.css">
+    </head>
+    <body>
+    <!-- 顶部导航开始 -->
+        <nav>
+        	<div class="container">
+        		<div class="con">
+        			<img src="qiy.img/1497971419.png">
+        			<div class="list">
+        				<a href="" class="list-icon">更多</a>
+        				<a href="qiyzhan.html" class="list-text">网站首页</a>
+        				<a href="er.html" class="list-text">花言花语</a>
+        				<a href="san.html" class="list-text">素馨动态 </a>
+        				<a href="si.html" class="list-text">素馨花艺</a>
+        				<a href="wu.html" class="list-text2">留言建议
+                        <div class="son">422</div></a>
+        				<a href="liu.html" class="list-text">关于素馨 </a>
+        			</div>
+        		</div>
+        	</div>
+        </nav>
+        <div class="ghy">
+        	<div class="container">
+                <h2>留言建议</h2>
+            </div>
+        </div>
+        <div class="kaow">
+            <div class="box">
+               <div class="text">
+                    <div class="ner">
+                         <div class="pic">
+                             <img src="qiy.img/al.png" alt="">
+                        </div>
+                    <div class="right">
+                        <h3>卡布奇诺</h3>
+                        <p>服务态度满意，速度很快，花儿漂亮，好评。</p>
+                    </div>
+
+                    </div>
+                    <div class="ner">
+                         <div class="pic">
+                             <img src="qiy.img/al.png" alt="">
+                        </div>
+                    <div class="right">
+                        <h3>卡布奇诺</h3>
+                        <p>服务态度满意，速度很快，花儿漂亮，好评。</p>
+                    </div>
+
+                    </div>
+               </div>
+
+               <div class="list">
+               <h2>欢迎留言</h2>
+               <input type="text" class="name">
+               <textarea name="" id="" cols="30" rows="10"></textarea>
+               <p>最多能输入300个字，你以输入<span>0</span>个字</p>
+               <button>提交</button>
+               </div>
+            </div>
+        </div>
+        <div class="dibu">
+        	<img src="qiy.img/46.png">
+        	<a>豫ICP备17021305号</a>
+        	<img src="qiy.img/n.png">
+        	<a>豫公网安备 41012202000160号</a>
+        	<h>联系电话 0371-62180519 15890062947</h>
+        	<h>郑州素馨花卉有限公司 版权所有 © 2017-2021</h>
+        </div>
+    </body>
+</html>
+    <script>
+       let  name=document.querySelector(".kaow  .box .list .name");
+ let con=document.querySelector(".kaow  .box .list textarea");
+let tj=document.querySelector(".kaow .box .list button");
+let text=document.querySelector(".kaow  .box .text");
+let ner=document.querySelector(".kaow  .box .text .ner");
+let span=document.querySelector(".kaow  .box .list span");
+
+console.log(name,con,tj,text,ner,);
+
+tj.onclick=function () {
+    let nm=name.value;
+    let cn=con.value;
+    name.value="";
+    con.value="";
+
+    if(!nm&&!cn){
+        alert("请输入信息")
+    }else if(nm&&cn){
+        text.innerHTML+=`
+        <div class="ner">
+        <div class="pic">
+        <img src="qiy.img/al.png" alt="">
+        </div>
+        <div class="right">
+        <h3>${nm}</h3>
+        <p>${cn}</p>
+        </div>
+        </div>`;
+    }
+}
+
+    con.onkeyup =function () {
+ let cons=this.value;
+ span.innerText=cons.length;
+}
+
+// text .onmousemove=function (e) {
+//     let ele=e.target;
+
+//     if(ele.nodeName=="DIV"&&ele.className=="ner"){
+//          ele.classList.add("active");
+//     }
+// }
+    </script>
